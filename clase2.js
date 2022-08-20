@@ -185,3 +185,71 @@ function approvedGrades (value) {
 };
 
 // console.log(approvedGrades(grades2))
+
+/*
+Crear un método que reciba un array de nacionalidades y
+cuente las diferentes nacionalidades que existen.
+(México/Argentina/Venezuela/Perú)
+
+contar(["mexicano", "argentino", "argentino", "venezolano",
+"peruano", "mexicano", "argentino", "peruano", "venezolano"]);
+// Mexicanos: 2
+// Venezolanos: 2
+// Argentinos: 3
+// Peruanos: 2
+*/
+
+let nacionalidades = ["mexicano", "argentino", "argentino", "venezolano","peruano", "mexicano", "argentino", "peruano", "venezolano"];
+
+let mexicanos = [];
+let venezolanos = [];
+let argentinos = [];
+let peruanos = [];
+
+function cantNacionalidades (value) {
+    value.forEach((element) => {
+        if (element === 'mexicano') {
+            mexicanos.push(element);
+        } else {
+            if (element === 'venezolano') {
+                venezolanos.push(element);
+            } else {
+                if (element === 'argentino') {
+                    argentinos.push(element);
+                } else {
+                    if (element === 'peruano') {
+                        peruanos.push(element);
+                    };
+                };
+            };
+        };
+    });
+};
+
+console.log(cantNacionalidades(nacionalidades));
+
+console.log('Hay ' + mexicanos.length + ' mexicanos en el array nacionalidades');
+
+// solución otro grupo del bootcamp
+function arreglosSinRepeticion(arreglo) {
+    let newArray = [];
+    arreglo.forEach((element) => {
+        if(!newArray.includes(element)){
+        newArray.push(element);
+        }
+    })
+    return newArray
+}
+
+function contar(arreglo){
+    let arregloUnico = arreglosSinRepeticion(arreglo)
+        for(i=0;arregloUnico.length > i;i++){
+            let arreglo2 = arreglo.filter(element => arregloUnico[i] == element)
+            console.log(arregloUnico[i] +": "+ arreglo2.length)
+        };
+};
+
+let personas = ["mexicano", "argentino", "argentino", "venezolano", "peruano", "mexicano", "argentino", "peruano", "venezolano"];
+
+contar(personas)
+
