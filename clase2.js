@@ -142,6 +142,26 @@ function isApproved (value) {
     };
 };
 
-isApproved(average(grades))
-console.log(average(grades));
+// isApproved(average(grades))
+// console.log(average(grades));
 
+/*
+Método que reciba un array e imprima en
+la consola cada uno de sus elementos.
+imprimeArray([‘uno’, 2,
+null, 0]);
+// uno
+// 2
+// null
+// 0
+*/
+
+let emergency = ['fuego estructural', 'rescate vehicular', 'rescate de persona', 'incendio estructural', 'incedio forestal', 'emanación de gas'];
+
+function printArray (value) {
+    value.forEach((element) => {
+        console.log('La emergencia es ' +  element);
+    });
+};
+
+printArray(emergency)
