@@ -1,2 +1,5 @@
-let arreglo = [1, 2, 3, 4, 5]
+let formaUno = new Array();
+let formaDos = [];
+let formaTres = ['Bárbara', 'Camila', 'Charles', 'Cristian', 'Darío'];
 
+let datosSueltos = [2, 'Jalisco', true, 'Ortodoncia'];
