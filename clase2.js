@@ -230,10 +230,10 @@ console.log(cantNacionalidades(nacionalidades));
 
 console.log('Hay ' + mexicanos.length + ' mexicanos en el array nacionalidades');
 
-// solución otro grupo del bootcamp
-function arreglosSinRepeticion(arreglo) {
+//solución otro grupo del bootcamp
+function arrayNoRepeat(array) {
     let newArray = [];
-    arreglo.forEach((element) => {
+    array.forEach((element) => {
         if(!newArray.includes(element)){
         newArray.push(element);
         }
@@ -241,15 +241,15 @@ function arreglosSinRepeticion(arreglo) {
     return newArray
 }
 
-function contar(arreglo){
-    let arregloUnico = arreglosSinRepeticion(arreglo)
-        for(i=0;arregloUnico.length > i;i++){
-            let arreglo2 = arreglo.filter(element => arregloUnico[i] == element)
-            console.log(arregloUnico[i] +": "+ arreglo2.length)
+function count(array){
+    let uniqueArray = arrayNoRepeat(array)
+        for(i=0;uniqueArray.length > i;i++){
+            let array2 = array.filter(element => uniqueArray[i] == element)
+            console.log(uniqueArray[i] +": "+ array2.length)
         };
 };
 
-let personas = ["mexicano", "argentino", "argentino", "venezolano", "peruano", "mexicano", "argentino", "peruano", "venezolano"];
+let people = ["mexicano", "argentino", "argentino", "venezolano", "peruano", "mexicano", "argentino", "peruano", "venezolano"];
 
-contar(personas)
+count(people)
 
