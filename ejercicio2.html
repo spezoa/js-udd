@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button type="button" id="btn1">1</button>
+    <button type="button" id="btn2">2</button>
+    <button type="button" id="btn3">3</button>
+
+    <div id="root">
+
+    </div>
+    <script>
+        const root = document.getElementById("root");
+
+        root.style.width = '300px';
+        root.style.height = '300px';
+
+        const btn1 = document.querySelector('#btn1');
+        btn1.addEventListener('click', event => aRojo(root));
+        const btn2 = document.querySelector('#btn2');
+        btn2.addEventListener('click', event => agranda(root));
+        const btn3 = document.querySelector('#btn3');
+        btn3.addEventListener('click', event => borde(root));
+        
+        function aRojo(root) {
+            root.style.backgroundColor = 'red';
+        };
+
+        function agranda(root) {
+            root.style.width = '500px';
+            root.style.height = '500px';
+        };
+
+        function borde(root) {
+             root.style.border = "10px solid yellow";
+        }
+
+    </script>
+</body>
+</html>

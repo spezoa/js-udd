@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio</title>
+</head>
+
+<body>
+    <div id="root">
+    </div>
+    <script>
+        //se selecciona el DIV root
+        const root = document.getElementById("root");
+
+        //creamos un button y le asignamos atributos  y el evento click
+        const bt1 = document.createElement("button");
+        bt1.innerHTML = "Button 1";
+        bt1.id = "bt1";
+        bt1.addEventListener("click", event => creah1(root));
+
+        //creamos un button y le asignamos atributos  y el evento click
+        const bt2 = document.createElement("button");
+        bt2.innerHTML = "Button 2";
+        bt2.id = "bt2";
+        bt2.addEventListener("click", event => creaP1(root));
+
+        //creamos un button y le asignamos atributos  y el evento click
+        const bt3 = document.createElement("button");
+        bt3.innerHTML = "Button 3";
+        bt3.id = "bt3";
+        bt3.addEventListener("click", event => alert("uyuyuyuy"));
+
+        root.appendChild(bt1);
+        root.appendChild(bt2);
+        root.appendChild(bt3);
+
+        function creah1(root) {
+            const h1 = document.createElement("h1");
+            h1.innerHTML = "He sido por js";
+            h1.id = `h1 ${Math.floor(Math.random() * 99) + 1}`
+            root.appendChild(h1);
+        }
+
+        function creaP1(root) {
+            const p1 = document.createElement("p");
+            p1.innerHTML = "Párrafo creado por js";
+            p1.id = `p1 ${Math.floor(Math.random() * 99) + 1}`
+            root.appendChild(p1);
+        }
+
+    </script>
+
+</body>
+
+</html>
