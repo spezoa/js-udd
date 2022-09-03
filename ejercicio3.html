@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <div id="main">
+        <nav>
+            <input type="text" id="key">
+            <input type="text" id="value">
+            <button id="btn1">Guarda en Local Storage</button>
+        </nav>
+
+        <div>
+            <textarea name="" id="datos" cols="40" rows="10"></textarea>
+        </div>
+
+    </div>
+
+
+
+    <script>
+
+        const btn1 = document.querySelector('#btn1');
+        const key = document.querySelector('#key');
+        const value = document.querySelector('#value');
+
+        btn1.addEventListener('click', event => guardaDatos(key.value, value.value))
+
+        function guardaDatos(key, value) {
+            const miStorage = window.localStorage;
+            miStorage.setItem(key, value);
+        }
+
+        function muestraDatos(key) {
+            const miStorage = window.localStorage;
+            const txt = document.querySelector('#datos');
+            txt.value = miStorage.getItem(key);
+
+            console.log(miStorage.getItem(key));
+        }
+
+    </script>
+
+</body>
+
+</html>
