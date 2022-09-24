@@ -61,3 +61,29 @@ function print(saludo) {
 
 saludar('wena choro!', print)
 console.log('final');
+
+function fnAsync() {
+    return new Promise((resolve,reject) => {
+        if (true) {
+            setTimeout(() => {
+                resolve()           
+            }, timeout);
+        }
+    })
+}
+
+
+
+//Escribe una función async que espere 500 milisegundos y luego devuelva la mayúscula de una cadena de caracteres dada.
+//Utiliza la función sleep proporcionada.
+
+function sleep(ms) {
+    return new Promise((resolve) => setTimeout(resolve, ms));
+}
+
+async function uppercaseString(s) {
+    let waitSleep = await sleep(500);
+    return s.toUpperCase();
+}
+
+uppercaseString("edward").then(console.log);

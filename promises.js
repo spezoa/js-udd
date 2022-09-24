@@ -22,7 +22,7 @@ cantidadVacas
 
 const miPromesa = new Promise((resolve,reject) => {
     setTimeout(() => {
-       //resolve('Hola mundo, soy llamado desde una promesa') ;
+       resolve('Hola mundo, soy llamado desde una promesa') ;
        reject('No se puede cumplir la promesa')
     }, 4000);
 });
@@ -32,5 +32,5 @@ miPromesa
         console.log(resultado);
     })
     .catch((e) => {
-        console.log(e);
+        console.error(e);
     })
